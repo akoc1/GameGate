@@ -144,7 +144,6 @@
                             Text="Sort" />
 
                         <AppBarButton
-                            Height="48"
                             VerticalAlignment="Center"
                             Icon="Sort"
                             IsCompact="True">
