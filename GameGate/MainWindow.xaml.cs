@@ -145,6 +145,10 @@ namespace GameGate
                 DisplayAboutDialog(game);
             }
         }
+        private void OpenGameFolderButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
 
         private async void DisplayAboutDialog(Game game)
         {
@@ -187,11 +191,6 @@ namespace GameGate
             };
 
             await aboutDL.ShowAsync();
-        }
-
-        private void OpenGameFolderButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
