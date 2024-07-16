@@ -165,7 +165,7 @@ namespace GameGate
             TextBlock gameTitleTextBlock = new TextBlock { Text = game.Name };
             TextBlock launcherTextBlock = new TextBlock { Text = game.GetLauncherName() };
             TextBlock gameSizeTextBlock = new TextBlock { Text = $"Game size: {game.Size / 1_000_000} MB" };
-            launcherTextBlock.Foreground = new SolidColorBrush { Color = Colors.SkyBlue };
+            launcherTextBlock.Foreground = new SolidColorBrush { Color = Colors.DeepSkyBlue };
 
             titleStackPanel.Children.Add(gameTitleTextBlock);
             titleStackPanel.Children.Add(launcherTextBlock);
