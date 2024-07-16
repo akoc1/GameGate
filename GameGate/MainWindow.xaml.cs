@@ -1,5 +1,9 @@
+using Microsoft.UI;
+using Microsoft.UI.Text;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Imaging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -144,11 +148,36 @@ namespace GameGate
 
         private async void DisplayAboutDialog(Game game)
         {
+            BitmapImage image = new BitmapImage { UriSource = new Uri(game.HeaderPath) };
+            Image headerImage = new Image { Source = image };
+
+            Border headerImageBorder = new Border { CornerRadius = new CornerRadius(8) };
+
+            headerImageBorder.Child = headerImage;
+
+            StackPanel mainStackPanel = new StackPanel { Orientation = Orientation.Vertical, Spacing = 8 };
+            StackPanel titleStackPanel = new StackPanel { Orientation = Orientation.Horizontal, Spacing = 8 };
+
+            TextBlock gameTitleTextBlock = new TextBlock { Text = game.Name };
+            TextBlock launcherTextBlock = new TextBlock { Text = game.GetLauncherName() };
+            launcherTextBlock.Foreground = new SolidColorBrush { Color = Colors.SkyBlue };
+
+            titleStackPanel.Children.Add(gameTitleTextBlock);
+            titleStackPanel.Children.Add(launcherTextBlock);
+
+            gameTitleTextBlock.FontSize = 24;
+
+            launcherTextBlock.FontSize = 16;
+            launcherTextBlock.FontWeight = FontWeights.Bold;
+            launcherTextBlock.VerticalAlignment = VerticalAlignment.Center;
+
+            mainStackPanel.Children.Add(headerImageBorder);
+            mainStackPanel.Children.Add(titleStackPanel);
+
             ContentDialog aboutDL = new ContentDialog()
             {
                 XamlRoot = rootGrid.XamlRoot,
-                Title = "About",
-                Content = $"{game.Name}",
+                Content = mainStackPanel,
                 CloseButtonText = "Ok"
             };
 

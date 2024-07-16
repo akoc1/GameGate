@@ -30,6 +30,20 @@ public class Game
         }
     }
 
+    public string GetLauncherName()
+    {
+        string output = string.Empty;
+
+        switch (Launcher)
+        {
+            case Launchers.Steam:
+                output = "Steam";
+                break;
+        }
+
+        return output;
+    }
+
     public void OpenGameFolder()
     {
         try
