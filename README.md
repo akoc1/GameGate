@@ -12,3 +12,4 @@ A simple game launcher created for Windows using the WinUI framework. Currently,
 - [ ] Xbox Game Pass
 - [ ] Ubisoft Connect
 - [ ] EA App
+- [ ] GOG Galaxy
