@@ -31,9 +31,6 @@ public static class GameService
             if (gameID == "228980") // Avoid adding Steam tools
                 continue;
 
-            //if (IsGameInstalled(gameID) == false) Trash, unnecessary and useless code
-            //    continue;
-
             games.Add(new Game
             {
                 Name = gameName,
@@ -97,25 +94,5 @@ public static class GameService
         }
 
         return output;
-    }
-
-    private static bool IsGameInstalled(string gameID)
-    {
-        string libraryFoldersVDF = GetSteamRootPath() + "/steamapps/libraryfolders.vdf";
-
-        string[] lines = File.ReadAllLines(libraryFoldersVDF);
-
-        foreach (string line in lines)
-        {
-            if (line.Contains(gameID))
-            {
-                string result = GetDataFromLine(line, gameID);
-
-                if (result == "0")
-                    return false;
-            }
-        }
-
-        return true;
     }
 }
