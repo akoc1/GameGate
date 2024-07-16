@@ -160,19 +160,24 @@ namespace GameGate
 
             TextBlock gameTitleTextBlock = new TextBlock { Text = game.Name };
             TextBlock launcherTextBlock = new TextBlock { Text = game.GetLauncherName() };
+            TextBlock gameSizeTextBlock = new TextBlock { Text = $"Game size: {game.Size / 1_000_000} MB" };
             launcherTextBlock.Foreground = new SolidColorBrush { Color = Colors.SkyBlue };
 
             titleStackPanel.Children.Add(gameTitleTextBlock);
             titleStackPanel.Children.Add(launcherTextBlock);
 
             gameTitleTextBlock.FontSize = 24;
+            gameTitleTextBlock.VerticalAlignment = VerticalAlignment.Top;
 
             launcherTextBlock.FontSize = 16;
             launcherTextBlock.FontWeight = FontWeights.Bold;
             launcherTextBlock.VerticalAlignment = VerticalAlignment.Center;
 
+            gameSizeTextBlock.FontSize = 16;
+
             mainStackPanel.Children.Add(headerImageBorder);
             mainStackPanel.Children.Add(titleStackPanel);
+            mainStackPanel.Children.Add(gameSizeTextBlock);
 
             ContentDialog aboutDL = new ContentDialog()
             {
