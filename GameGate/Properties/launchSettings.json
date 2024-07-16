@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "GameGate (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "GameGate (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
