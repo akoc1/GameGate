@@ -10,6 +10,3 @@ A simple game launcher created for Windows using the WinUI framework. Currently,
 - [ ] GOG Galaxy
 
 # Screenshots
-![ss1](https://github.com/user-attachments/assets/3d550fae-6b10-401b-9ad9-f77916518663)
-
-![ss2](https://github.com/user-attachments/assets/1938e46e-c7fc-45f2-8940-72143eedc020)
