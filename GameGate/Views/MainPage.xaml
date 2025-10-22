@@ -8,7 +8,36 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource BackgroundBrush}">
-        <TextBlock Text="Home page" />
+    <Grid Padding="8,4" Background="{StaticResource BackgroundBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--  Title Bar  -->
+        <Grid ColumnSpacing="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Width="28"
+                Height="28"
+                Source="/Assets/Icons/icon-no-bg.png" />
+            <TextBlock
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                FontFamily="{StaticResource MainFontBold}"
+                Text="Game Gate" />
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <Button>Set up machine</Button>
+
+        </Grid>
+
     </Grid>
 </Page>

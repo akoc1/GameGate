@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows10.0.26100.0</TargetFramework>
@@ -15,7 +15,8 @@
     <WindowsPackageType>None</WindowsPackageType>
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
     <AssemblyVersion>0.0.1</AssemblyVersion>
-    <ApplicationIcon>Assets\appicon.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\Icons\favicon.ico</ApplicationIcon>
+	<DefineConstants>$(DefineConstants);DISABLE_XAML_GENERATED_MAIN</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Assets\Generated\**" />
@@ -28,6 +29,7 @@
     <None Remove="Assets\Fonts\Montserrat-Bold.ttf" />
     <None Remove="Assets\Fonts\Montserrat-Medium.ttf" />
     <None Remove="Assets\Fonts\Montserrat-Regular.ttf" />
+    <None Remove="Assets\Icons\favicon.ico" />
     <None Remove="MainWindow.xaml" />
     <None Remove="Themes\Controls.xaml" />
     <None Remove="Themes\LauncherTheme.xaml" />
@@ -79,6 +81,9 @@
     <PRIResource Remove="Assets\Generated\**" />
   </ItemGroup>
   <ItemGroup>
+    <Content Remove="Assets\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Update="Assets\Fonts\Montserrat-Bold.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -86,6 +91,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="Assets\Fonts\Montserrat-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Icons\favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Icons\icon-no-bg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
