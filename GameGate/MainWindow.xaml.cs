@@ -6,7 +6,13 @@ namespace GameGate
     {
         public MainWindow()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+            InitializeWindowProperties();
+        }
+
+        private void InitializeWindowProperties()
+        {
+            ExtendsContentIntoTitleBar = true;
         }
     }
 }
