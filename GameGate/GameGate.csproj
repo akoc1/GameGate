@@ -41,6 +41,7 @@
     <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.6584" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.251003001" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.10" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
 
@@ -54,7 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Launchers\" />
-    <Folder Include="Helpers\" />
     <Folder Include="Models\" />
     <Folder Include="Services\" />
   </ItemGroup>
