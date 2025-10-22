@@ -25,7 +25,12 @@
     <Page Remove="Assets\Generated\**" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Assets\Fonts\Montserrat-Bold.ttf" />
+    <None Remove="Assets\Fonts\Montserrat-Medium.ttf" />
+    <None Remove="Assets\Fonts\Montserrat-Regular.ttf" />
     <None Remove="MainWindow.xaml" />
+    <None Remove="Themes\Controls.xaml" />
+    <None Remove="Themes\LauncherTheme.xaml" />
     <None Remove="Views\MainPage.xaml" />
   </ItemGroup>
 
@@ -50,7 +55,6 @@
     <Folder Include="Helpers\" />
     <Folder Include="Models\" />
     <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\MainPage.xaml">
@@ -73,5 +77,26 @@
   </PropertyGroup>
   <ItemGroup>
     <PRIResource Remove="Assets\Generated\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Assets\Fonts\Montserrat-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Montserrat-Medium.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Montserrat-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Themes\Controls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Themes\LauncherTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>
