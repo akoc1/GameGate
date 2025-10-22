@@ -7,6 +7,7 @@
     <Color x:Key="SecondaryColor">#FFB84D</Color>
     <Color x:Key="BackgroundColor">#1E1E2E</Color>
     <Color x:Key="PanelColor">#2E2E3E</Color>
+    <Color x:Key="PanelSecondaryColor">#55555F</Color>
     <Color x:Key="TextColor">#FFFFFF</Color>
     <Color x:Key="TextSecondaryColor">#F2E9E4</Color>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameGate.Services;
+using System;
 using System.Configuration;
 
 namespace GameGate.Helpers
@@ -13,10 +14,14 @@ namespace GameGate.Helpers
 
             try
             {
-                value = ConfigurationManager.AppSettings[key];
-            } catch (Exception ex)
+                value = ConfigurationManager.AppSettings.Get(key);
+
+                if (value == null)
+                    NotificationService.Instance.ShowNotification($"Couldn't fetch key: {key}", NotificationType.Warning);
+            }
+            catch (Exception ex)
             {
-                // handle exception
+                NotificationService.Instance.ShowNotification($"Error while reading configuration: {ex.Message}", NotificationType.Error);
             }
 
             return value;
@@ -39,7 +44,7 @@ namespace GameGate.Helpers
             }
             catch (Exception ex)
             {
-                // handle exception
+                NotificationService.Instance.ShowNotification($"Error occured while writing to configuration: {ex.Message}", NotificationType.Error);
             }
 
             return value;

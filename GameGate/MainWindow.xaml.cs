@@ -26,8 +26,8 @@ namespace GameGate
             var primaryDark = (Color)Application.Current.Resources["PrimaryDarkColor"];
 
             AppWindow.TitleBar.ButtonForegroundColor = Colors.White;
-            AppWindow.TitleBar.ButtonHoverBackgroundColor = primary;
-            AppWindow.TitleBar.ButtonPressedBackgroundColor = primaryDark;
+            //AppWindow.TitleBar.ButtonHoverBackgroundColor = primary;
+            //AppWindow.TitleBar.ButtonPressedBackgroundColor = primaryDark;
         }
     }
 }

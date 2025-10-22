@@ -15,7 +15,7 @@
     </Style>
 
     <Style BasedOn="{StaticResource AccentButtonStyle}" TargetType="Button">
-        <Setter Property="FontFamily" Value="{StaticResource MainFont}" />
+        <Setter Property="FontFamily" Value="{StaticResource MainFontMedium}" />
     </Style>
 
     <Style TargetType="TextBox">

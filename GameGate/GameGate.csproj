@@ -33,6 +33,7 @@
     <None Remove="MainWindow.xaml" />
     <None Remove="Themes\Controls.xaml" />
     <None Remove="Themes\LauncherTheme.xaml" />
+    <None Remove="UserControls\NotificationControl.xaml" />
     <None Remove="Views\MainPage.xaml" />
   </ItemGroup>
 
@@ -55,8 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Launchers\" />
-    <Folder Include="Models\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\MainPage.xaml">
@@ -99,6 +98,11 @@
     <Content Update="Assets\Icons\icon-no-bg.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="UserControls\NotificationControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Themes\Controls.xaml">

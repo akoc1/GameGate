@@ -10,3 +10,10 @@ public enum Launchers
     ItchIO
 }
 
+public enum NotificationType
+{
+    Info,
+    Warning,
+    Error
+}
+

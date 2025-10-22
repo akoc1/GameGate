@@ -1,3 +1,4 @@
+using GameGate.Helpers;
 using GameGate.ViewModels;
 using Microsoft.UI.Xaml.Controls;
 
