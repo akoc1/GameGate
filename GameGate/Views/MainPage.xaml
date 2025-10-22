@@ -33,11 +33,8 @@
                 Text="Game Gate" />
         </Grid>
 
-        <Grid Grid.Row="1">
-
-            <Button>Set up machine</Button>
-
-        </Grid>
+        <!--  Content Frame  -->
+        <Frame x:Name="ContentFrame" Grid.Row="1" />
 
     </Grid>
 </Page>

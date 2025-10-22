@@ -1,5 +1,4 @@
 using GameGate.ViewModels;
-using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
 namespace GameGate.Views
