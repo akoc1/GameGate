@@ -10,11 +10,3 @@ public enum Launchers
     ItchIO
 }
 
-public enum SortingOptions
-{
-    AtoZ,
-    ZtoA,
-    Random,
-    HoursPlayedLeast,
-    HoursPlayedMost
-}
