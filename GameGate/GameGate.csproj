@@ -42,6 +42,8 @@
     <Folder Include="Assets\Generated\" />
     <Folder Include="Helpers\" />
     <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\MainPage.xaml">
